@@ -1,0 +1,140 @@
+/*GERAL*/
+    /*HEADER*/
+    .site-nav-main .site-nav-left-wrapper:after{
+        background: none;
+    }
+    .post-full-byline{
+        border-top: none;
+    }
+    .site-header-content{
+        text-align: center;
+    }
+    .site-nav-logo img{
+        height: 50px;
+        width: auto;
+        position: relative;
+        bottom: 15px;
+
+        background: #00000080;
+        padding: 2px 26px;
+        border-radius: 40px;
+    
+    }
+    .site-nav-logo img:hover{
+        background: #00000075
+    }
+    .site-nav-main{
+        background: #5c268e;
+    }
+    .site-archive-header .no-image .site-header-content{
+        border-bottom: none;   
+    }
+.post-card-primary-tag, a {
+    color: #de6a3b;
+    text-decoration: none !important;
+}
+.post-full-content blockquote{
+    border-color: #de6a3b;
+}
+.site-description{
+    margin: 1em 0;
+}
+.read-next-card-footer a:hover{
+    border-color: #de6a3b;
+    color: #de6a3b;
+}
+
+/*HOME*/
+    .home-template img.site-logo {
+    max-height: 150px !important;
+    }
+    /*HEADER*/
+    .home-template .site-home-header{
+        align-self: center;
+        width: 90%;
+        border-radius: 4px;
+        overflow: hidden;
+        margin-top: 20px;
+    }
+.home-template .site-header-background:before {
+    background: rgba(92, 38, 142, 0.9);
+}
+.home-template h2.site-description{
+    background: #151515;
+    border-radius: 10px;
+    font-family: monospace;
+    padding: 10px 20px;
+}
+.site-home-header .site-header-content {
+    padding: 5vw 3vw 8vw;
+}
+
+/*POST CARD*/
+.post-card{
+    border-bottom: none;
+}
+
+/*POST-COMMENTS*/
+.post-full-comments{
+    width: 100%;
+}
+.fb-comments, .fb-comments * {
+    width:100% !important;
+}
+
+/*FOOTER*/
+.site-footer-content{
+    align-self: stretch;
+    display: flex;
+    justify-content: center;
+}
+
+/*RESPONSIVO*/
+@media only screen and (max-width: 700px) {
+    .home-template .site-home-header{
+        width: 100%;
+        overflow: hidden;
+        margin-top: 0px;
+        border-radius: 0px;
+    }
+
+    /*NAV*/
+    .site-nav{
+        margin-left: 0;
+        overflow: visible;
+    }
+    .nav-menu-content .nav{
+        display: none;
+        flex-direction: column;
+        background-color: #ef5527;
+    }
+    .site-nav-right{
+        margin-right: 5vw;
+    }
+    .site-home-header .site-nav{
+        margin-left: -5vw;
+    }
+    .site-home-header .site-nav-right{
+        margin-right: 0;
+    }
+    .site-nav-right{
+        display: block;
+    }
+    .site-nav-content{
+        display: none;
+    }
+
+    /*MOBILE MENU*/
+    .nav-menu{
+        display: block;
+    }
+    .site-nav-logo{
+        display: none;
+    }
+}
+@media only screen and (min-width: 700px) {
+    .nav-menu{
+        display: none;
+    }
+    
+}

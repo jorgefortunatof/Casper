@@ -1,40 +1,49 @@
 <nav class="site-nav">
     <div class="site-nav-left-wrapper">
         <div class="site-nav-left">
+            <div onclick="onClickMenu()" class="nav-menu">
+                <a class="social-link nav-menu-icon" title="Menu" rel="noopener">
+                    {{> "icons/menu"}}
+                </a>
+                <div class="nav-menu-content">
+                    {{navigation}}
+                </div>
+            </div>
             {{#if @site.logo}}
-                <a class="site-nav-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
+            <a class="site-nav-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
             {{else}}
-                <a class="site-nav-logo" href="{{@site.url}}">{{@site.title}}</a>
+            <a class="site-nav-logo" href="{{@site.url}}">{{@site.title}}</a>
             {{/if}}
             <div class="site-nav-content">
                 {{#if @site.navigation}}
-                    {{navigation}}
+                {{navigation}}
                 {{/if}}
                 {{#is "post"}}
-                    <span class="nav-post-title {{#unless @site.logo}}dash{{/unless}}">{{post.title}}</span>
+                <span class="nav-post-title {{#unless @site.logo}}dash{{/unless}}">{{post.title}}</span>
                 {{/is}}
             </div>
         </div>
     </div>
     <div class="site-nav-right">
         {{#if @site.secondary_navigation}}
-            {{navigation type="secondary"}}
+        {{navigation type="secondary"}}
         {{else}}
-            <div class="social-links">
-                {{#if @site.facebook}}
-                    <a class="social-link social-link-fb" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
-                {{/if}}
-                {{#if @site.twitter}}
-                    <a class="social-link social-link-tw" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
-                {{/if}}
-            </div>
-            {{#unless @labs.members}}
-                <a class="rss-button" href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
-            {{/unless}}
+        <div class="social-links">
+            {{#if @site.facebook}}
+            <a class="social-link social-link-fb" href="{{facebook_url @site.facebook}}" title="Facebook"
+                target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
+            {{/if}}
+            {{#if @site.twitter}}
+            <a class="social-link social-link-tw" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank"
+                rel="noopener">{{> "icons/twitter"}}</a>
+            {{/if}}
+            <a class="social-link social-link-fb" href="https://www.instagram.com/programar_cafe/" title="Instagram"
+                target="_blank" rel="noopener">{{> "icons/instagram"}}</a>
+        </div>
         {{/if}}
 
         {{#if @labs.members}}
-            <a class="subscribe-button" href="#subscribe">Subscribe</a>
+        <a class="subscribe-button" href="#subscribe">Assinar</a>
         {{/if}}
     </div>
 </nav>

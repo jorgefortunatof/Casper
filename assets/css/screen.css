@@ -283,7 +283,7 @@ body {
     right: 0;
     left: 0;
     z-index: 1000;
-    background: color(var(--darkgrey) l(-5%));
+    background: color(var(--purple) l(-5%));
 }
 
 .site-nav {
@@ -292,7 +292,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    overflow: hidden;
+    overflow-y: hidden;
     height: 64px;
     font-size: 1.3rem;
 }
@@ -2377,7 +2377,7 @@ Usage (In Ghost editor):
     margin: -4px 0 0;
     width: 110px;
     height: 110px;
-    box-shadow: rgba(255,255,255,0.1) 0 0 0 6px;
+    box-shadow: rgba(255, 255, 255, 0.1) 0 0 0 6px;
 }
 
 .author-header-content .author-bio {
